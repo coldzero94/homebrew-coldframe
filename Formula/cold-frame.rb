@@ -4,18 +4,18 @@
 class ColdFrame < Formula
   desc "Local-first ownable memory layer for LLM agents (one offline SQLite file)"
   homepage "https://github.com/coldzero94/cold-frame"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/coldzero94/cold-frame/releases/download/v0.1.0/cold-frame-macos-arm64"
-      sha256 "744901491f18dd1c2f712510214d8cc93472ea6aedbfaeebe285cd6f62fd8bdd"
+      url "https://github.com/coldzero94/cold-frame/releases/download/v0.1.1/cold-frame-macos-arm64"
+      sha256 "828beabd845af5eab46621c4f36c6eedc9f7a00e5688d45c7669aa4ded2bad03"
     end
   end
   on_linux do
-    url "https://github.com/coldzero94/cold-frame/releases/download/v0.1.0/cold-frame-linux-x86_64"
-    sha256 "1b4e61b23c5795214f96552a905f13875c9285e624e82f1f2bbfaf53b43bd1ea"
+    url "https://github.com/coldzero94/cold-frame/releases/download/v0.1.1/cold-frame-linux-x86_64"
+    sha256 "4fa219140a653e50f6ce3278c122345961874f2ef894e6d9cdcdefb780195525"
   end
 
   def install
@@ -24,7 +24,7 @@ class ColdFrame < Formula
   end
 
   test do
-    assert_match version, shell_output("#{bin}/cold-frame --version")
+    assert_match "0.1.1", shell_output("#{bin}/cold-frame --version")
   end
 
   def caveats
